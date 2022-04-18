@@ -12,13 +12,13 @@ Wine pair will use an API to find wines to pair with your meals or vice versa. S
 - User login functionality
 - Be deployed online and accessible to the public via Heroku
 
-- User Model: 
+### User Model: 
 - displayName
 - username
 - password
 - wines
 
-- Wines Model:
+### Wines Model:
 - type (red or white)
 - varietal
 - img
