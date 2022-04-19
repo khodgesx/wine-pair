@@ -1,0 +1,36 @@
+{
+  "name": "wine-pair",
+  "version": "1.0.0",
+  "description": "Wine pair will use an API to find wines to pair with your meals or vice versa. Search wine by main ingredient to find a suggested wine or search by wine varietal to get suggested meal pairings. The user can further search for different wines matching the suggested varietal. The user will have a list of saved wines that they can add to. This will include wines they had and what they paired it with and any notes they want to add about the wine and/or pairing.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khodgesx/wine-pair.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khodgesx/wine-pair/issues"
+  },
+  "homepage": "https://github.com/khodgesx/wine-pair#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.29.1",
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-flash-message": "^2.1.0",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^6.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "multer-storage-cloudinary": "^4.0.0"
+  }
+}
