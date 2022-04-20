@@ -27,17 +27,15 @@ router.get('/:id', async (req, res)=>{
 
 
 //create route with photo upload
-router.post ('/:id', upload.single('img'), async (req, res)=>{
+// router.post ('/:id', upload.single('img'), async (req, res)=>{
+router.post ('/:id', async (req, res)=>{
     try{
     const wineData = req.body 
     const newWine = await Wine.create({
         name: wineData.name,
-        cuisine: wineData.cuisine,
-        img: wineData.img,
-        faveDish: wineData.faveDish,
+        varietal: wineData.varietal,
+        // img: wineData.img,
         notes: wineData.notes,
-        priceLevel: wineData.priceLevel,
-        visited: wineData.visited,
         user: req.params.id
         
     })
