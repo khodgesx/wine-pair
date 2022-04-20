@@ -7,7 +7,7 @@ const wineSchema = new Schema({
     // type: String,
     varietal: String,
     // mealPairs: [String],
-    // img: String,
+    img: String,
     notes: String,
     user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true })

@@ -34,7 +34,7 @@ router.post ('/:id', async (req, res)=>{
     const newWine = await Wine.create({
         name: wineData.name,
         varietal: wineData.varietal,
-        // img: wineData.img,
+        img: wineData.img,
         notes: wineData.notes,
         user: req.params.id
         
