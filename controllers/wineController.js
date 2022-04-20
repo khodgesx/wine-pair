@@ -4,6 +4,7 @@ const Wine = require('../models/wine')
 const User = require('../models/user')
 const multer = require('multer')
 const cloudinary = require('cloudinary')
+const { exists } = require('../models/wine')
 const upload = multer({dest:'./uploads/'})
 
 //index
@@ -31,18 +32,18 @@ router.get('/:id', async (req, res)=>{
 router.post ('/:id', async (req, res)=>{
     try{
     const wineData = req.body 
-    const newWine = await Wine.create({
-        name: wineData.name,
-        varietal: wineData.varietal,
-        img: wineData.img,
-        notes: wineData.notes,
-        user: req.params.id
-        
-    })
-        res.send({
-            success:true,
-            data: newWine
+        const newWine = await Wine.create({
+            name: wineData.name,
+            varietal: wineData.varietal,
+            img: wineData.img,
+            notes: wineData.notes,
+            user: req.params.id
         })
+            res.send({
+                success:true,
+                data: newWine
+            })
+               
     }catch(err){
         console.log(err)
         res.send({

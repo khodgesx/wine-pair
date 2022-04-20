@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const wineSchema = new Schema({
-    name: { type: String, required: true },
+    name: { type: String, unique:true, required: true },
     //red or white:
     // type: String,
     varietal: String,
