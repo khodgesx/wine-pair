@@ -4,12 +4,11 @@ const Wine = require('../models/wine')
 const User = require('../models/user')
 const multer = require('multer')
 const cloudinary = require('cloudinary')
-const { exists } = require('../models/wine')
 const upload = multer({dest:'./uploads/'})
 
 //index
 //get wines by user ID
-router.get('/:id', async (req, res)=>{
+router.get('/user/:id', async (req, res)=>{
     const userId = await User.findById(req.params.id)
     const wines = await Wine.find({user:userId})
     try{
