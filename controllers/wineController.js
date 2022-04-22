@@ -36,6 +36,7 @@ router.post ('/:id', async (req, res)=>{
             varietal: wineData.varietal,
             img: wineData.img,
             notes: wineData.notes,
+            type: wineData.type,
             user: req.params.id
         })
             res.send({

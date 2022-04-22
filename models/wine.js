@@ -3,9 +3,8 @@ const Schema = mongoose.Schema;
 
 const wineSchema = new Schema({
     name: { type: String, unique:true, required: true },
-    //red or white:
-    // type: String,
     varietal: String,
+    type: String,
     // mealPairs: [String],
     img: String,
     notes: String,
