@@ -25,9 +25,7 @@ router.get('/user/:id', async (req, res)=>{
     }
 })
 
-
-//create route with photo upload
-// router.post ('/:id', upload.single('img'), async (req, res)=>{
+//create route - saving from spoonacular api
 router.post ('/:id', async (req, res)=>{
     try{
     const wineData = req.body 
@@ -53,6 +51,32 @@ router.post ('/:id', async (req, res)=>{
 
     }
 })
+//create new wine with photo upload
+router.post ('/new/:id', upload.single('img'), async (req, res)=>{
+        try{
+        const wineData = req.body 
+            const newWine = await Wine.create({
+                name: wineData.name,
+                varietal: wineData.varietal,
+                img: wineData.img,
+                notes: wineData.notes,
+                type: wineData.type,
+                user: req.params.id
+            })
+                res.send({
+                    success:true,
+                    data: newWine
+                })
+                   
+        }catch(err){
+            console.log(err)
+            res.send({
+                success:false,
+                data:err.message
+            })
+    
+        }
+    })
 
 //show
 router.get('/:id', async (req, res)=>{
