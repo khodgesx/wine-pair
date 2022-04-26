@@ -63,6 +63,7 @@ router.post ('/new/:id', upload.single('img'), async (req, res)=>{
                 img: wineData.img,
                 notes: wineData.notes,
                 rating: wineData.rating,
+                apiId: wineData.apiId,
                 type: wineData.type,
                 user: req.params.id
             })
