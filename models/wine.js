@@ -9,6 +9,7 @@ const wineSchema = new Schema({
     img: String,
     notes: String,
     rating: Number,
+    apiId: String,
     user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true })
 
