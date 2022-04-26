@@ -5,7 +5,7 @@ const wineSchema = new Schema({
     name: { type: String, required: true },
     varietal: String,
     type: String,
-    // mealPairs: [String],
+    mealPairs: [String],
     img: String,
     notes: String,
     rating: Number,
