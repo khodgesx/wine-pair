@@ -34,6 +34,7 @@ router.post ('/:id', async (req, res)=>{
             varietal: wineData.varietal,
             img: wineData.img,
             notes: wineData.notes,
+            rating: wineData.rating,
             type: wineData.type,
             user: req.params.id
         })
@@ -60,6 +61,7 @@ router.post ('/new/:id', upload.single('img'), async (req, res)=>{
                 varietal: wineData.varietal,
                 img: wineData.img,
                 notes: wineData.notes,
+                rating: wineData.rating,
                 type: wineData.type,
                 user: req.params.id
             })
