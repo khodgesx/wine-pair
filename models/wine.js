@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const wineSchema = new Schema({
-    name: { type: String, required: true },
+    name: String,
     varietal: String,
     type: String,
     mealPairs: [String],
     img: String,
     notes: String,
     rating: Number,
-    apiId: { type: String, unique: true },
+    apiId: { type: String, unique: true},
     user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true })
 

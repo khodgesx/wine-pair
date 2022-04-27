@@ -33,6 +33,7 @@ router.post ('/', upload.single('img'), async (req, res)=>{
         displayName: userData.displayName,
         username: userData.username,
         password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)),
+        faveVarietal: userData.faveVarietal,
         img: userData.img
     })
     console.log(newUser)
