@@ -4,7 +4,8 @@
   "description": "Wine pair will use an API to find wines to pair with your meals or vice versa. Search wine by main ingredient to find a suggested wine or search by wine varietal to get suggested meal pairings. The user can further search for different wines matching the suggested varietal. The user will have a list of saved wines that they can add to. This will include wines they had and what they paired it with and any notes they want to add about the wine and/or pairing.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
