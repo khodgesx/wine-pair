@@ -12,7 +12,7 @@ Pour Pair is a place for users to search meal pairings for wine, search wine pai
 
 ## Tech Stack: MERN
 ### Back-End: MongoDB, Express.js, Node.js
-### [Front-End](FE Readme Link here) : React.js
+### [Front-End](https://github.com/khodgesx/wine-pair-app/blob/main/README.md) : React.js
 
 
 ### API
