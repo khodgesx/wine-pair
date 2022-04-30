@@ -123,9 +123,9 @@ router.put('/:id', async (req, res)=>{
 router.put('/update-photo/:id', upload.single('img'), async (req, res)=>{
     try{
         const wine = await Wine.findByIdAndUpdate(req.params.id, req.body, {new:true})
-        console.log(req.body)
-        console.log(req.params.id)
-        console.log(req.body.img)
+        // console.log(req.body)
+        // console.log(req.params.id)
+        // console.log(req.body.img)
 
         res.send({
             success:true,

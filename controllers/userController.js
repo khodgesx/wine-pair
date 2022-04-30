@@ -27,7 +27,6 @@ router.post ('/', upload.single('img'), async (req, res)=>{
     try{
    
     const userData = req.body 
-    console.log(userData)
     
     const newUser = await User.create({
         displayName: userData.displayName,
@@ -36,7 +35,7 @@ router.post ('/', upload.single('img'), async (req, res)=>{
         faveVarietal: userData.faveVarietal,
         img: userData.img
     })
-    console.log(newUser)
+    // console.log(newUser)
         res.send({
             success:true,
             data: newUser
@@ -53,7 +52,7 @@ router.post ('/', upload.single('img'), async (req, res)=>{
 router.post('/login', async (req, res) => {
     try {
         const possibleUser = await User.findOne({ username: req.body.username })
-        console.log(possibleUser)
+        // console.log(possibleUser)
         if (possibleUser) {
             if (bcrypt.compareSync(req.body.password, possibleUser.password)) {
                 res.send({
@@ -114,9 +113,6 @@ router.put('/:id', async (req, res)=>{
 router.put('/update-photo/:id', upload.single('img'), async (req, res)=>{
     try{
         const user = await User.findByIdAndUpdate(req.params.id, req.body, {new:true})
-        console.log(req.body)
-        console.log(req.params.id)
-        console.log(req.body.img)
 
         res.send({
             success:true,
